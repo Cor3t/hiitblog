@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}{% endblock%}</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'homepage'%}">Home</a></li>
+            <li><a href="{% url 'completedtodo'%}">Completed</a></li>
+            <li><a href="{% url 'createtodo'%}">Create Todo</a></li>
+
+        </ul>
+    </nav>
+    {% block body%}
+    {% endblock %}
+</body>
+
+</html>
